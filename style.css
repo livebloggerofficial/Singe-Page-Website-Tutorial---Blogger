@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 1px 18px 18px -5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 16px;
+  color: #07050d;
+  line-height: 2;
+  margin: 24px 0;
+}
+
+/* Header - Navigation */
+
+header {
+  height: 100vh;
+  background: #07050d;
+  overflow: hidden;
+}
+
+header .desktop-nav {
+  background: #fdfdfd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+
+  position: fixed;
+  top: 0;
+  width: 1024px;
+  z-index: 200;
+  box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.2);
+}
+
+header .desktop-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header .desktop-nav ul li {
+  margin: 0 24px;
+}
+
+header .desktop-nav a {
+  text-decoration: none;
+  color: #07050d;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Header - Hero */
+
+header .hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 76px;
+  height: 100%;
+}
+
+header .hero-container .left {
+  flex: 1;
+  margin-left: 100px;
+}
+
+header .hero-container .left p.i-am {
+  font-size: 24px;
+  color: #fdfdfd;
+  margin: 0;
+}
+
+header .hero-container .left h2 {
+  font-size: 64px;
+  color: #fdfdfd;
+  text-transform: uppercase;
+}
+
+header .hero-container .left h2:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.btn {
+  background: #ff4d4d;
+  text-decoration: none;
+  color: #07050d;
+  margin: 16px 0;
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn.light {
+  color: #fdfdfd;
+}
+
+.hero-container .left .btn {
+  margin-left: 20px;
+}
+
+.hero-container .left .social-icons img {
+  margin: 16px 20px;
+  height: 40px;
+}
+
+.hero-container .left .social-icons a {
+  text-decoration: none;
+}
+
+.hero-container .right img {
+  height: 580px;
+}
+
+/* Section */
+
+section {
+  padding: 100px 50px;
+}
+
+section .section-content {
+  margin-left: 200px;
+}
+
+section h2 {
+  transform: rotate(-90deg);
+  position: absolute;
+  color: #cacaca;
+  font-size: 54px;
+  margin-top: 80px;
+}
+
+section h2::after {
+  content: "";
+  height: 10px;
+  width: 80px;
+  display: block;
+  background: #ff4d4d;
+  right: 0;
+  position: absolute;
+}
+
+section .section-content p:first-of-type {
+  margin: 0;
+}
+
+/* Work Section */
+
+section .work-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Testimonials Section */
+
+.testimonials-section {
+  background: #07050d;
+  color: #fdfdfd;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 65px 120px 50px 120px;
+}
+
+.testimonials-section p {
+  color: #fdfdfd;
+  padding: 0 24px;
+}
+
+.testimonials-section .says img {
+  border-radius: 24px;
+  transform: rotate(-4deg);
+}
+
+.testimonials-section .says h3 {
+  margin-top: 36px;
+  font-size: 24px;
+  margin-left: 24px;
+  color: #ff4d4d;
+}
+
+.testimonials-section .says .company-name {
+  margin-top: 0;
+  color: #ff4d4d;
+}
+
+.testimonials-section .testimonial-text {
+  padding-left: 100px;
+  padding-right: 48px;
+  font-size: 20px;
+}
+
+.testimonials-section .quote-icon {
+  opacity: 0.5;
+  position: absolute;
+  top: 72px;
+  left: 95px;
+}
+
+/* Contact Section */
+
+section .email,
+section .phone,
+section .address {
+  display: flex;
+  align-items: center;
+  margin: 16px 24px;
+}
+
+section .contact-text {
+  margin-left: 40px;
+}
+
+/* Footer */
+
+footer {
+  background: #07050d;
+  color: #fdfdfd;
+  padding: 48px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Additional Styles */
+
+#testimonials {
+  margin-bottom: 76px;
+}
+
+/* Hidden Elements */
+
+.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: auto;
+  }
+
+  header .desktop-nav {
+    display: none;
+  }
+
+  header .mobile-nav {
+    display: flex;
+    background: #fdfdfd;
+    justify-content: space-between;
+    padding: 16px 24px;
+    position: fixed;
+    width: 100%;
+    z-index: 400;
+    box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  header .mobile-nav .menu-btn {
+    cursor: pointer;
+  }
+
+  header .hero-container {
+    position: relative;
+  }
+
+  header .hero-container .right {
+    position: absolute;
+    right: -253px;
+  }
+
+  header .hero-container .left {
+    z-index: 100;
+    margin-left: 40px;
+  }
+
+  header .hero-container .left h2 {
+    font-size: 48px;
+  }
+
+  .hero-container .left .social-icons img {
+    margin: 16px 20px;
+  }
+
+  /* Sections */
+
+  section {
+    padding: 100px 30px 0 30px;
+  }
+
+  section .section-content {
+    margin-left: 0;
+  }
+
+  section h2 {
+    transform: rotate(0deg);
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    display: inline-block;
+    position: relative;
+  }
+
+  section h2::after {
+    height: 4px;
+    width: 60px;
+  }
+
+  /* My Work Section */
+
+  section .work-container {
+    grid-template-columns: 1fr;
+  }
+
+  section .work-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  section#work {
+    padding: 100px 0 0 0;
+  }
+
+  section#work h2 {
+    padding-left: 30px;
+  }
+
+  section#work .btn {
+    margin-left: 30px;
+    margin-top: 48px;
+  }
+
+  section .work-container img.mobile-hide {
+    display: none;
+  }
+
+  /* Testimonials Section */
+
+  .testimonials-section {
+    flex-direction: column;
+    padding: 50px 30px;
+    padding-top: 140px;
+  }
+
+  .testimonials-section .testimonial-text {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 48px;
+  }
+
+  .testimonials-section .quote-icon {
+    transform: rotate(16deg);
+    top: 48px;
+    left: 24px;
+  }
+
+  /* Contact Section */
+
+  section .email,
+  section .phone,
+  section .address {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  section .contact-text {
+    margin-left: 0;
+    margin-top: 24px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  /* Mobile Menu Items */
+
+  .mobile-menu-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: #07050d;
+    z-index: 300;
+    width: 100%;
+    left: 0;
+    top: -400px;
+    padding-top: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms;
+  }
+
+  .mobile-menu-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    top: 0;
+  }
+
+  .mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu-container ul li {
+    margin: 30px 0;
+  }
+
+  .mobile-menu-container ul li a {
+    text-decoration: none;
+    color: #fdfdfd;
+    font-size: 20px;
+  }
+}
+
+/* Animations */
+
+.hero-container p.i-am {
+  animation: fade-down 2000ms forwards;
+}
+
+.hero-container .left h2:nth-of-type(1),
+.hero-container .left h2:nth-of-type(2),
+.hero-container .social-icons img:nth-of-type(1),
+.hero-container .social-icons img:nth-of-type(2),
+.hero-container .social-icons img:nth-of-type(3),
+.hero-container .left .btn {
+  opacity: 0;
+  animation: fade-in 2000ms forwards;
+}
+
+.hero-container .left h2:nth-of-type(1) {
+  animation-delay: 1000ms;
+}
+
+.hero-container .left h2:nth-of-type(2) {
+  animation-delay: 1400ms;
+}
+
+.hero-container .social-icons img:nth-of-type(1) {
+  animation-delay: 2800ms;
+}
+
+.hero-container .social-icons img:nth-of-type(2) {
+  animation-delay: 2900ms;
+}
+
+.hero-container .social-icons img:nth-of-type(3) {
+  animation-delay: 3000ms;
+}
+
+.hero-container .left .btn {
+  animation-delay: 2500ms;
+}
+
+.hero-container .right img {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fade-left 3000ms forwards;
+  animation-delay: 1200ms;
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
